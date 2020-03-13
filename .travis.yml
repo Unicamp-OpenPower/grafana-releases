@@ -20,4 +20,4 @@ install:
   - npm install -g yarn
   
 script:
-  - bash build.sh
+  - travis-wait bash build.sh
