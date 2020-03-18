@@ -11,6 +11,7 @@ then
     unzip v$github_version.zip
     mv grafana-$github_version grafana
     cd grafana
+    node --version
     make
     ls
     #cd ./bin/linux-ppc64le/
