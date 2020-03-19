@@ -15,7 +15,8 @@ then
     #go version
     #go doc fmt
     make
-    #cd ./bin/linux-ppc64le/
+    cd ./bin/linux-ppc64le/
+    ls
     #mv grafana-server grafana-$github_version-server
     #mv grafana-cli grafana-$github_version-cli
     #./grafana-$github_version-cli
