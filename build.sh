@@ -4,17 +4,17 @@ ftp_version=$(cat ftp_version.txt)
 
 if [ $github_version != $ftp_version ]
 then
-    #cd $GOPATH/src/github.com
-    #mkdir grafana
-    #cd grafana
-    #wget https://github.com/grafana/grafana/archive/v$github_version.zip
-    #unzip v$github_version.zip
-    #mv grafana-$github_version grafana
-    #cd grafana
-    node --version
-    go version
-    go doc fmt
-    #make
+    cd $GOPATH/src/github.com
+    mkdir grafana
+    cd grafana
+    wget https://github.com/grafana/grafana/archive/v$github_version.zip
+    unzip v$github_version.zip
+    mv grafana-$github_version grafana
+    cd grafana
+    #node --version
+    #go version
+    #go doc fmt
+    make
     #cd ./bin/linux-ppc64le/
     #mv grafana-server grafana-$github_version-server
     #mv grafana-cli grafana-$github_version-cli
