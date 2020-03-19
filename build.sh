@@ -18,9 +18,10 @@ then
     mv grafana-cli grafana-$github_version-cli
     ./grafana-$github_version-cli
     ./grafana-$github_version-server --help
-    if [ $github_version > $ftp_version ]
-    then
-      lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /home/travis/gopath/src/github.com/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-server"
-      lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /home/travis/gopath/src/github.com/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-cli" 
-    fi
+    pwd
+    #if [ $github_version > $ftp_version ]
+    #then
+      #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /home/travis/gopath/src/github.com/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-server"
+      #lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /home/travis/gopath/src/github.com/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-cli" 
+    #fi
 fi
