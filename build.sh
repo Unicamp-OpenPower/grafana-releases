@@ -11,7 +11,10 @@ then
     unzip v$github_version.zip
     mv grafana-$github_version grafana
     cd grafana
+    ls
     make
+    make test
+    ls
     #cd ./bin/linux-ppc64le/
     #ls
     #mv grafana-server grafana-$github_version-server
