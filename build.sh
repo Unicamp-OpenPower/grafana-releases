@@ -12,16 +12,16 @@ then
     mv grafana-$github_version grafana
     cd grafana
     make
-    cd ./bin/linux-ppc64le/
-    ls
-    mv grafana-server grafana-$github_version-server
-    mv grafana-cli grafana-$github_version-cli
-    ./grafana-$github_version-cli
-    ./grafana-$github_version-server --help
-    pwd
-    if [ $github_version > $ftp_version ]
-    then
-      lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-server"
-      lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-cli" 
-    fi
+    #cd ./bin/linux-ppc64le/
+    #ls
+    #mv grafana-server grafana-$github_version-server
+    #mv grafana-cli grafana-$github_version-cli
+    #./grafana-$github_version-cli
+    #./grafana-$github_version-server --help
+    #pwd
+    #if [ $github_version > $ftp_version ]
+    #then
+    #  lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-server"
+    #  lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/grafana/bin/linux-ppc64le/grafana-$github_version-cli" 
+    #fi
 fi
