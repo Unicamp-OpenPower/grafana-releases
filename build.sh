@@ -1,4 +1,5 @@
-github_version=$(cat github_version.txt)
+#github_version=$(cat github_version.txt)
+github_version=7.0.0
 ftp_version=$(cat ftp_version.txt)
 #del_version=$(cat delete_version.txt)
 
@@ -11,12 +12,10 @@ then
     unzip v$github_version.zip
     mv grafana-$github_version grafana
     cd grafana
-    ls
     make
     make test
+    cd ./bin/linux-ppc64le/
     ls
-    #cd ./bin/linux-ppc64le/
-    #ls
     #mv grafana-server grafana-$github_version-server
     #mv grafana-cli grafana-$github_version-cli
     #./grafana-$github_version-cli
