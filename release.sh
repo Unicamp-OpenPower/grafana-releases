@@ -11,8 +11,8 @@ then
   cd repository-scrips/
   chmod +x empacotar-deb.sh
   chmod +x empacotar-rpm.sh
-  mv empacotar-deb.sh $BINPATH
-  mv empacotar-rpm.sh $BINPATH
+  sudo mv empacotar-deb.sh $BINPATH
+  sudo mv empacotar-rpm.sh $BINPATH
   cd $BINPATH
   ./empacotar-deb.sh grafana-cli grafana-$github_version-cli $github_version " "
   ./empacotar-deb.sh grafana-server grafana-$github_version-server $github_version " "
