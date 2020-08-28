@@ -10,7 +10,7 @@ cache:
 
 install:
   - sudo apt update
-  - sudo apt install -y lftp
+  - sudo apt install -y lftp rpm
   - alias python=/usr/local/bin/python3
   - python3 ftp_version.py
   - wget --quiet https://github.com/ibmsoe/phantomjs/releases/download/2.1.1/phantomjs
