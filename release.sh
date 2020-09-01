@@ -14,8 +14,8 @@ then
   sudo mv empacotar-deb.sh $BINPATH
   sudo mv empacotar-rpm.sh $BINPATH
   cd $BINPATH
-  ./empacotar-deb.sh grafana-cli grafana-$github_version-cli $github_version " "
-  ./empacotar-deb.sh grafana-server grafana-$github_version-server $github_version " "
+  sudo ./empacotar-deb.sh grafana-cli grafana-$github_version-cli $github_version " "
+  sudo ./empacotar-deb.sh grafana-server grafana-$github_version-server $github_version " "
   sudo ./empacotar-rpm.sh grafana-cli grafana-$github_version-cli $github_version " " "The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More"
   sudo ./empacotar-rpm.sh grafana-server grafana-$github_version-server $github_version " " "The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More"
   if [ $github_version > $ftp_version ]
