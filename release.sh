@@ -4,7 +4,7 @@ ftp_version=$(cat ftp_version.txt)
 LOCALPATH=/var/lib/jenkins/workspace/grafana-releases
 BINPATH=$LOCALPATH/grafana/bin/linux-ppc64le
 
-if [ $github_version == $ftp_version ]
+if [ $github_version != $ftp_version ]
 then
   cd $LOCALPATH
   git clone https://$USERNAME:$TOKEN@github.com/Unicamp-OpenPower/repository-scrips.git
