@@ -6,7 +6,7 @@ html = str(
     requests.get('https://github.com/grafana/grafana/releases/latest')
     .content)
 index = html.find('Release ')
-github_version = html[index + 9:index + 14]
+github_version = html[index + 8:index + 13]
 file = open('github_version.txt', 'w')
 file.writelines(github_version)
 file.close()
