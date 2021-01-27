@@ -1,4 +1,5 @@
 github_version=$(cat github_version.txt)
+github_version=7.3.7
 ftp_version=$(cat ftp_version.txt)
 #del_version=$(cat delete_version.txt)
 

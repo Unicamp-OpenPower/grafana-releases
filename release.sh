@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 github_version=$(cat github_version.txt)
+github_version=7.3.7
 ftp_version=$(cat ftp_version.txt)
 LOCALPATH=/var/lib/jenkins/workspace/grafana-releases
 BINPATH=$LOCALPATH/grafana/bin/linux-ppc64le
