@@ -9,6 +9,8 @@ then
     mv grafana-$github_version grafana
     cd grafana
     make
+    yarn install --check-cache
+    make build
     cd bin/linux-ppc64le/
     mv grafana-server grafana-$github_version-server
     mv grafana-cli grafana-$github_version-cli
