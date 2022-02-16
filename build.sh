@@ -11,7 +11,9 @@ then
     make
     yarn
     make build
+    echo -e "\n\n\n Build concluido! \n\n\n"
     cd bin/linux-ppc64le/
+    ls
     mv grafana-server grafana-$github_version-server
     mv grafana-cli grafana-$github_version-cli
     ./grafana-$github_version-cli --version
