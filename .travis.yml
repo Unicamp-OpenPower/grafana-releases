@@ -1,9 +1,9 @@
 #Start
 os: linux
 arch: ppc64le
-dist: bionic
+dist: focal
 language: go
-go: 1.14.x
+go: 1.17.x
 cache:
 - npm
 - yarn
