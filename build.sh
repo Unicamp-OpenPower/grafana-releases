@@ -19,7 +19,7 @@ then
     ./grafana-$github_version-cli --version
     ./grafana-$github_version-server -v
     pwd
-    if [ $github_version > $ftp_version ]
+    if [ $github_version == $ftp_version ]
     then
       lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/bin/linux-ppc64le/grafana-$github_version-server"
       lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/grafana/ /var/lib/jenkins/workspace/grafana-releases/grafana/bin/linux-ppc64le/grafana-$github_version-cli"
